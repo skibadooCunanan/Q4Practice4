@@ -5,23 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Q4 Practice 4</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .login-card {
+            width: 100%;
+            max-width: 380px;
+            padding: 30px;
+            border-radius: 20px;
+            background: #ffffff;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        .login-card h2 {
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        .form-control {
+            border-radius: 12px;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .form-control:focus {
+            box-shadow: 0 0 8px rgba(255, 182, 193, 0.6);
+            border-color: #ffb6c1;
+        }
+        body {
+            height: 100vh;
+            background: linear-gradient(135deg, #ffd6e0, #cde7ff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
 </head>
 <body>
-    
-    <form>
-        <h2>Log-in Form</h2>
-        <label for="uname">Username</label>
-            <br>
-            <input type="text" id="uname" class="form-control" placeholder="Enter here" required>
-            <br>
-        <label for="p">Password</label>
-            <br>
-            <input type="password" id="p" class="form-control" placeholder="Enter here" required>
-            <br>
-        <input type="button" name="button" id="loginBTN" value="Login" class="btn btn-info rounded-5" onclick="GetIn()">
-        <input type="reset" name="button" id="cancel" value="Cancel" class="btn btn-info rounded-5" >
-        <p id="display"></p>
-    </form>
+ <div class="login-card">
+        <div class="emoji">😅</div>
+        <h2>who is you</h2>
+
+        <form>
+            <input type="text" id="uname" class="form-control mb-3" placeholder="Username" required>
+            <input type="password" id="p" class="form-control mb-3" placeholder="Password" required>
+
+            <input type="button" id="loginBTN" value="Login" class="btn btn-login" onclick="GetIn()">
+            <input type="reset" value="Cancel" class="btn btn-cancel">
+
+            <p id="display"></p>
+        </form>
+    </div>
+
 
     <script>
         let attempt_counter = 0;
